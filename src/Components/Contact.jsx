@@ -2,7 +2,12 @@ import React, { useState } from "react";
 import emailjs from "emailjs-com";
 import toast from "react-hot-toast";
 import { Link } from "react-scroll";
+
 const Contact = () => {
+  const service_id = import.meta.env.VITE_SERVICE_ID;
+  const template_id = import.meta.env.VITE_TEMPLATE_ID;
+  const public_id = import.meta.env.VITE_PUBLIC_ID;
+
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [messages, setMessages] = useState("");
@@ -38,11 +43,11 @@ const Contact = () => {
     setIsLoading(true);
     emailjs
       .sendForm(
-        "service_kzot4wb",
-        "template_wffwa9k",
+        service_id,
+        template_id,
 
         e.target,
-        "P24PYypOp9GzWNx1f"
+        public_id
       )
       .then((res) => {
         console.log("message send:", res.text);
@@ -62,7 +67,9 @@ const Contact = () => {
       <section id="contact" className="py-20 bg-gray-100 dark:bg-bc">
         <div className="px-4 max-w-7xl mx-auto">
           <div className="mb-16">
-            <h1 className="text-4xl font-bold mb-3 text-center dark:text-white text-black">Contact</h1>
+            <h1 className="text-4xl font-bold mb-3 text-center dark:text-white text-black">
+              Contact
+            </h1>
             <div
               data-aos="zoom-in"
               className="w-20 h-1 bg-gradient-to-r from-orange-600 to-orange-400 mx-auto"
@@ -73,24 +80,35 @@ const Contact = () => {
           </div>
           <div className="grid grid-cols-2 gap-12">
             <div data-aos="zoom-in-right" className="flex flex-col">
-              <h1 className="text-2xl font-semibold mb-6 dark:text-white text-black">Get in Touch</h1>
+              <h1 className="text-2xl font-semibold mb-6 dark:text-white text-black">
+                Get in Touch
+              </h1>
               <div className="space-y-4 flex flex-col">
                 <div className="inline-flex items-center group gap-2">
                   <Link className="hover:text-orange-600 hover:ml-5 translate-all duration-700 text-lg cursor-pointer">
                     <i class="fa-regular fa-envelope text-orange-600"></i>{" "}
-                  <span className="dark:text-white text-black hover:text-orange-600 transition-all duration-600 ease-in-out">  Youremail@gmail.com </span>
+                    <span className="dark:text-white text-black hover:text-orange-600 transition-all duration-600 ease-in-out">
+                      {" "}
+                      Youremail@gmail.com{" "}
+                    </span>
                   </Link>
                 </div>
                 <div className="inline-flex items-center group ">
                   <Link className="hover:text-orange-600 hover:ml-5 translate-all duration-700 text-lg cursor-pointer">
                     <i class="fa-brands fa-linkedin-in text-orange-600"></i>{" "}
-                   <span className="dark:text-white text-black hover:text-orange-600 transition-all duration-600 ease-in-out"> linkedin.com </span>
+                    <span className="dark:text-white text-black hover:text-orange-600 transition-all duration-600 ease-in-out">
+                      {" "}
+                      linkedin.com{" "}
+                    </span>
                   </Link>
                 </div>
                 <div className="inline-flex items-center group gap-2 ">
                   {" "}
                   <Link className="hover:text-orange-600 hover:ml-5 translate-all duration-700 text-lg cursor-pointer">
-                    <i class="fa-brands fa-github text-orange-600"></i> <span className="dark:text-white text-black hover:text-orange-600 transition-all duration-600 ease-in-out">github.com</span>
+                    <i class="fa-brands fa-github text-orange-600"></i>{" "}
+                    <span className="dark:text-white text-black hover:text-orange-600 transition-all duration-600 ease-in-out">
+                      github.com
+                    </span>
                   </Link>
                 </div>
               </div>
@@ -116,12 +134,16 @@ const Contact = () => {
                       Name
                     </label>
                     <input
-                    disabled={isLoading}
+                      disabled={isLoading}
                       value={name}
                       onChange={(e) => setName(e.target.value)}
                       type="text"
                       id="name"
-                      className={`py-2 px-3 text-sm rounded-md border focus-visible:outline-orange-600 focus:border-3 border-orange-300 ${isLoading?"text-gray-500 cursor-not-allowed":"text-black"}` }
+                      className={`py-2 px-3 text-sm rounded-md border focus-visible:outline-orange-600 focus:border-3 border-orange-300 ${
+                        isLoading
+                          ? "text-gray-500 cursor-not-allowed"
+                          : "text-black"
+                      }`}
                     />
                     <span
                       id="name_error"
@@ -136,12 +158,16 @@ const Contact = () => {
                       Email
                     </label>
                     <input
-                    disabled={isLoading}
+                      disabled={isLoading}
                       value={email}
                       onChange={(e) => setEmail(e.target.value)}
                       type="email"
                       id="email"
-                      className={`py-2 px-3 text-sm rounded-md border focus-visible:outline-orange-600 focus:border-3 border-orange-300 ${isLoading?"text-gray-500 cursor-not-allowed":"text-black"}`}
+                      className={`py-2 px-3 text-sm rounded-md border focus-visible:outline-orange-600 focus:border-3 border-orange-300 ${
+                        isLoading
+                          ? "text-gray-500 cursor-not-allowed"
+                          : "text-black"
+                      }`}
                     />
                     <span
                       id="email_error"
@@ -156,12 +182,16 @@ const Contact = () => {
                       Message
                     </label>
                     <textarea
-                    disabled={isLoading}
+                      disabled={isLoading}
                       value={messages}
                       onChange={(e) => setMessages(e.target.value)}
                       name="message"
                       id="message"
-                      className={`min-h-[88px] px-3 py-2 text-sm ${isLoading?"text-gray-500 cursor-not-allowed":"text-black"} rounded-md border focus-visible:outline-orange-600 focus:border-3 border-orange-300`}
+                      className={`min-h-[88px] px-3 py-2 text-sm ${
+                        isLoading
+                          ? "text-gray-500 cursor-not-allowed"
+                          : "text-black"
+                      } rounded-md border focus-visible:outline-orange-600 focus:border-3 border-orange-300`}
                     ></textarea>
                     <span
                       id="msg_error"
