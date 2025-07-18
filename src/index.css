@@ -1,0 +1,18 @@
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+
+
+
+@theme {
+  --animate-fade-in-scale: fade-in-scale 2s ease-out forwards;
+  --color-bc:#000000;
+  
+  @keyframes fade-in-scale {
+    0% {
+      width: 0%;
+    }
+    100% {
+      width: 100%;
+    }
+  }
+}

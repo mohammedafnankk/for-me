@@ -1,0 +1,10 @@
+.words2,.words3 {
+  background-image: linear-gradient(to right, #f54a00, #FFA726); /* adjust */
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+  background-clip: text;
+
+
+}
