@@ -17,6 +17,7 @@ import "./App.css";
 import "aos/dist/aos.css";
 import Certificats from "./Components/Certificats";
 import Foooter from "./Components/Foooter";
+import useDarkMode from "./Components/useDarkmode";
 
 gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
 
@@ -26,8 +27,25 @@ Aos.init({
 });
 
 function App() {
+
+//  const isDarkMode = useDarkMode();
+
+//   useEffect(() => {
+//     document.documentElement.classList.toggle("dark", isDarkMode);
+//   }, [isDarkMode]);
+
+
+// console.log(isDarkMode);
+
+
+
+
+
+
   const themes = useSelector((state) => state.theme);
   const theme = themes.theme;
+  // console.log("ttt",theme);
+  
 
   const wrapper = useRef();
   const content = useRef();
@@ -42,7 +60,7 @@ function App() {
   }, []);
 
   return (
-    <div className={`${theme}`}>
+    <div >
       <Toaster
         position="top-center"
         reverseOrder={false}

@@ -4,14 +4,18 @@ import gsap from "gsap";
 import SplitText from "gsap/SplitText";
 import { useDispatch } from "react-redux";
 import { themes } from "../features/ThemeSlice";
+import { useSelector } from "react-redux";
+import useDarkMode from "./useDarkmode";
 import "../Nav.css";
 
 gsap.registerPlugin(SplitText);
 
 const Navbar = () => {
   const dispatch = useDispatch();
-
-  const [theme, setTheme] = useState("light");
+  const [isDark, setIsDark] = useDarkMode();
+  const themess = useSelector((state) => state.theme);
+  const isTheme = themess.theme;
+  // console.log(isDark,"====");
 
   const textRef = useRef(null);
   useEffect(() => {
@@ -33,10 +37,14 @@ const Navbar = () => {
     });
   }, []);
 
-  const handeChangeTheme = () => {
-    setTheme((prev) => (prev === "light" ? "dark" : "light"));
-    dispatch(themes(theme));
-  };
+  // const handeChangeTheme = () => {
+  //   // console.log("hello1");
+  //   onClick={() => setIsDark(!isDark)}
+
+  //   dispatch(themes(isTheme==="light"?"dark":"light"));
+  //   // console.log("hello2");
+
+  // };
 
   return (
     <div>
@@ -116,7 +124,14 @@ const Navbar = () => {
               Contact{" "}
               <div className="absolute bottom-1  w-0 h-0.5 bg-orange-600 group-hover:w-full top-7 transition-all duration-300"></div>
             </Link>
-            <button onClick={handeChangeTheme}>T</button>
+
+            <div onClick={() => setIsDark(!isDark)} className="cursor-pointer">
+              {isDark ? (
+                <i class="fa-solid fa-sun text-2xl text-orange-700 hover:text-orange-600 transition-transform duration-500 hover:rotate-360"></i>
+              ) : (
+                <i class="fa-solid fa-moon text-2xl text-orange-600 hover:text-orange-700 transition-transform duration-500 hover:rotate-360"></i>
+              )}
+            </div>
           </div>
         </div>
       </div>
