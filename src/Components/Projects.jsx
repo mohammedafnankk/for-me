@@ -5,13 +5,13 @@ const Projects = () => {
     <div>
       <section id="projects" className="py-20 dark:bg-bc bg-gray-100">
         <div className="px-8">
-          <div className="mb-16 text-center">
-            <h1 className="text-4xl font-semibold mb-3 dark:text-white text-black">
+          <div className="mb-16 text-center" data-aos="fade-up">
+            <h1 className="text-4xl font-bold mb-3 dark:text-white text-black">
               Projects
             </h1>
             <div
               data-aos="zoom-in"
-              className="w-20 h-1 bg-gradient-to-r from-orange-600 to-orange-400 mx-auto"
+              className="w-20 h-1 bg-gradient-to-r from-orange-600 to-orange-400 mx-auto delay-700"
             ></div>
           </div>
           <div className="grid grid-cols-3 gap-8">

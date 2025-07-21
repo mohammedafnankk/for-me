@@ -16,6 +16,7 @@ import Contact from "./Components/Contact";
 import "./App.css";
 import "aos/dist/aos.css";
 import Certificats from "./Components/Certificats";
+import Foooter from "./Components/Foooter";
 
 gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
 
@@ -61,6 +62,7 @@ function App() {
           <Blog />
           <Contact />
           <Certificats />
+          <Foooter/>
         </div>
       </main>
     </div>

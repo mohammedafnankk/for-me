@@ -6,13 +6,13 @@ const About = () => {
     <div>
       <section id="about" className="py-20 dark:bg-bc bg-gray-100">
         <div className="flex flex-col justify-center items-center">
-          <div className="mb-16">
+          <div className="mb-16" data-aos="fade-up">
             <h1 className="text-4xl font-bold mb-3 dark:text-white text-black">
               About Me
             </h1>
             <div
               data-aos="zoom-in"
-              className="w-20 h-1 bg-gradient-to-r from-orange-600 to-orange-400 mx-auto"
+              className="w-20 h-1 bg-gradient-to-r from-orange-600 to-orange-400 mx-auto delay-700"
             ></div>
           </div>
           <div data-aos="fade-up">

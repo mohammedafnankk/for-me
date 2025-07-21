@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import emailjs from "emailjs-com";
 import toast from "react-hot-toast";
-import { Link } from "react-scroll";
+// import { Link } from "react-router-dom";
 
 const Contact = () => {
   const service_id = import.meta.env.VITE_SERVICE_ID;
@@ -66,13 +66,13 @@ const Contact = () => {
     <div>
       <section id="contact" className="py-20 bg-gray-100 dark:bg-bc">
         <div className="px-4 max-w-7xl mx-auto">
-          <div className="mb-16">
+          <div className="mb-16" data-aos="fade-up">
             <h1 className="text-4xl font-bold mb-3 text-center dark:text-white text-black">
               Contact
             </h1>
             <div
               data-aos="zoom-in"
-              className="w-20 h-1 bg-gradient-to-r from-orange-600 to-orange-400 mx-auto"
+              className="w-20 h-1 bg-gradient-to-r from-orange-600 to-orange-400 mx-auto delay-700"
             ></div>
             <p className="mt-4 text-gray-500 dark:text-[#EEEEEE] text-center ">
               Let's connect and discuss opportunities
@@ -85,31 +85,31 @@ const Contact = () => {
               </h1>
               <div className="space-y-4 flex flex-col">
                 <div className="inline-flex items-center group gap-2">
-                  <Link className="hover:text-orange-600 hover:ml-5 translate-all duration-700 text-lg cursor-pointer">
+                  <a href="https://afnankk9995@gmail.com" className="hover:text-orange-600 hover:ml-5 translate-all duration-700 text-lg cursor-pointer">
                     <i class="fa-regular fa-envelope text-orange-600"></i>{" "}
                     <span className="dark:text-white text-black hover:text-orange-600 transition-all duration-600 ease-in-out">
                       {" "}
-                      Youremail@gmail.com{" "}
+                      afnankk9995@gmail.com{" "}
                     </span>
-                  </Link>
+                  </a>
                 </div>
                 <div className="inline-flex items-center group ">
-                  <Link className="hover:text-orange-600 hover:ml-5 translate-all duration-700 text-lg cursor-pointer">
+                  <a  href="https://www.linkedin.com/in/mohammed-afnan-kk" className="hover:text-orange-600 hover:ml-5 translate-all duration-700 text-lg cursor-pointer">
                     <i class="fa-brands fa-linkedin-in text-orange-600"></i>{" "}
                     <span className="dark:text-white text-black hover:text-orange-600 transition-all duration-600 ease-in-out">
                       {" "}
-                      linkedin.com{" "}
+                      linkedin.com/in/mohammed-afnan-kk{" "}
                     </span>
-                  </Link>
+                  </a>
                 </div>
                 <div className="inline-flex items-center group gap-2 ">
                   {" "}
-                  <Link className="hover:text-orange-600 hover:ml-5 translate-all duration-700 text-lg cursor-pointer">
+                  <a href="https://github.com/mohammedafnankk" className="hover:text-orange-600 hover:ml-5 translate-all duration-700 text-lg cursor-pointer">
                     <i class="fa-brands fa-github text-orange-600"></i>{" "}
                     <span className="dark:text-white text-black hover:text-orange-600 transition-all duration-600 ease-in-out">
-                      github.com
+                      github.com/mohammedafnankk
                     </span>
-                  </Link>
+                  </a>
                 </div>
               </div>
             </div>
