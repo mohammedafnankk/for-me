@@ -4,7 +4,7 @@ const Projects = () => {
   return (
     <div>
       <section id="projects" className="py-20 dark:bg-bc bg-gray-100">
-        <div className="px-8">
+        <div className="px-8 max-sm:px-4">
           <div className="mb-16 text-center" data-aos="fade-up">
             <h1 className="text-4xl font-bold mb-3 dark:text-white text-black">
               Projects
@@ -14,7 +14,7 @@ const Projects = () => {
               className="w-20 h-1 bg-gradient-to-r from-orange-600 to-orange-400 mx-auto delay-700"
             ></div>
           </div>
-          <div className="grid grid-cols-3 gap-8">
+          <div className="grid grid-cols-3 gap-8 max-sm:grid-cols-1">
             <div data-aos="fade-up" data-aos-duration="3000">
               <div className="rounded-lg border border-gray-300 group bg-white transition delay-150 duration-600 ease-in-out hover:translate-y-1 hover:scale-110 hover:shadow-xl">
                 <div className="p-6 space-y-1.5">

@@ -44,7 +44,7 @@ const HeroSection = () => {
           <p className="text-lg sm:text-xl text-[#9a9a9a] dark:text-[#71717a] mb-8">
             Building web apps & mastering testing – one project at a time.
           </p>
-          <div className="flex justify-center items-center gap-4">
+          <div className="flex justify-center items-center gap-4 max-sm:grid">
             <button className="cursor-pointer group transition-all duration-300 hover:scale-105 hover:shadow-lg hover:bg-orange-400 bg-orange-600 text-white inline-flex justify-center items-center px-8 text-lg py-2 rounded-md">
               View My Work <i class="fa-solid fa-arrow-right pl-2"></i>
             </button>

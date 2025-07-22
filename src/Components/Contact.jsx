@@ -78,7 +78,7 @@ const Contact = () => {
               Let's connect and discuss opportunities
             </p>
           </div>
-          <div className="grid grid-cols-2 gap-12">
+          <div className="grid grid-cols-2 gap-12 max-sm:grid-cols-1">
             <div data-aos="zoom-in-right" className="flex flex-col">
               <h1 className="text-2xl font-semibold mb-6 dark:text-white text-black">
                 Get in Touch

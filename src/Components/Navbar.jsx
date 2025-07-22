@@ -15,6 +15,7 @@ const Navbar = () => {
   const [isDark, setIsDark] = useDarkMode();
   const themess = useSelector((state) => state.theme);
   const isTheme = themess.theme;
+  const [isOpen,setIsOpen]= useState(false)
   // console.log(isDark,"====");
 
   const textRef = useRef(null);
@@ -66,7 +67,7 @@ const Navbar = () => {
               <span>n</span>
             </h1>
           </div>
-          <div className="text-[#71717a]  space-x-8 flex ">
+          <div className="text-[#71717a]  space-x-8 flex max-md:hidden ">
             <Link
               className="hover:text-orange-600 cursor-pointer group relative flex flex-col"
               to="home"

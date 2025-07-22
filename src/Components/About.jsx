@@ -16,7 +16,7 @@ const About = () => {
             ></div>
           </div>
           <div data-aos="fade-up">
-            <div className="dark:bg-[#EEEEEE] bg-white transition delay-150 duration-600 ease-in-out hover:-translate-y-1 hover:scale-110 p-8 max-w-4xl mx-auto text-lg space-y-4 text-[#71717a] rounded-lg  shadow-2xs hover:shadow-xl border border-gray-300">
+            <div className="dark:bg-[#EEEEEE] bg-white transition delay-150 duration-600 ease-in-out hover:-translate-y-1 hover:scale-110 p-8 max-w-4xl mx-auto text-lg space-y-4 text-[#71717a] rounded-lg  shadow-2xs hover:shadow-xl border border-gray-300 max-sm:mx-4">
               <p>
                 I'm a passionate MERN stack developer and an aspiring QA
                 Automation Engineer. I love building full-stack applications and
