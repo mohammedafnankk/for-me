@@ -47,11 +47,17 @@ const Navbar = () => {
 
   // };
 
+   const HandleDarkMode=()=>{
+    setIsDark(!isDark)
+    setIsOpen(false)
+   }
+    console.log(isOpen);
+    
   return (
     <div>
       <div className="px-4 fixed w-full border backdrop-blur-md z-50 dark:border-0 border-b-gray-300">
-        <div className="flex justify-between items-center h-16">
-          <div>
+        <div className={`flex justify-between  ${isOpen===false?"items-center":" "} py-5 `}>
+          <div className={`${isOpen===false?"":"hidden"}`}>
             <h1 ref={textRef} className="font-bold text-xl text-orange-600">
               <span>M</span>
               <span className="">o</span>
@@ -67,9 +73,13 @@ const Navbar = () => {
               <span>n</span>
             </h1>
           </div>
-          <div className="text-[#71717a]  space-x-8 flex max-md:hidden ">
+          {/* <div className="flex"> */}
+
+          
+          <div  className={`text-[#71717a] text-2xl   flex   ${isOpen===false?"max-md:hidden space-x-8":"max-md:block h-screen space-y-3 "} `}>
             <Link
               className="hover:text-orange-600 cursor-pointer group relative flex flex-col"
+              onClick={()=>setIsOpen(false)}
               to="home"
               smooth={true}
               duration={500}
@@ -80,6 +90,7 @@ const Navbar = () => {
 
             <Link
               className="hover:text-orange-600 cursor-pointer group relative flex flex-col"
+              onClick={()=>setIsOpen(false)}
               to="about"
               smooth={true}
               duration={500}
@@ -90,6 +101,7 @@ const Navbar = () => {
 
             <Link
               className="hover:text-orange-600 cursor-pointer group relative flex flex-col"
+              onClick={()=>setIsOpen(false)}
               to="skills"
               smooth={true}
               duration={500}
@@ -100,6 +112,7 @@ const Navbar = () => {
 
             <Link
               className="hover:text-orange-600 cursor-pointer group relative flex flex-col"
+              onClick={()=>setIsOpen(false)}
               to="projects"
               smooth={true}
               duration={500}
@@ -109,6 +122,7 @@ const Navbar = () => {
             </Link>
             <Link
               className="hover:text-orange-600 cursor-pointer group relative flex flex-col"
+              onClick={()=>setIsOpen(false)}
               to="blog"
               smooth={true}
               duration={500}
@@ -118,6 +132,7 @@ const Navbar = () => {
             </Link>
             <Link
               className="hover:text-orange-600 cursor-pointer group relative flex-col flex"
+              onClick={()=>setIsOpen(false)}
               to="contact"
               smooth={true}
               duration={500}
@@ -126,17 +141,25 @@ const Navbar = () => {
               <div className="absolute bottom-1  w-0 h-0.5 bg-orange-600 group-hover:w-full top-7 transition-all duration-300"></div>
             </Link>
 
-            <div onClick={() => setIsDark(!isDark)} className="cursor-pointer">
+            <div onClick={HandleDarkMode} className="cursor-pointer ">
               {isDark ? (
                 <i class="fa-solid fa-sun text-2xl text-orange-700 hover:text-orange-600 transition-transform duration-500 hover:rotate-360"></i>
               ) : (
                 <i class="fa-solid fa-moon text-2xl text-orange-600 hover:text-orange-700 transition-transform duration-500 hover:rotate-360"></i>
               )}
             </div>
+
           </div>
+
+            <div onClick={()=>setIsOpen((prev)=>prev===false?true:false)} className="text-white hidden max-sm:block">
+      
+              {isOpen===false?<i class="fa-solid fa-bars-staggered text-2xl text-orange-600"></i>:<i class="fa-solid fa-xmark text-2xl text-orange-600"></i>}
+            </div>
+          </div>
+
         </div>
       </div>
-    </div>
+    // </div>
   );
 };
 

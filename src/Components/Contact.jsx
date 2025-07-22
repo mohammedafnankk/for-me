@@ -85,7 +85,12 @@ const Contact = () => {
               </h1>
               <div className="space-y-4 flex flex-col">
                 <div className="inline-flex items-center group gap-2">
-                  <a href="https://afnankk9995@gmail.com" className="hover:text-orange-600 hover:ml-5 translate-all duration-700 text-lg cursor-pointer">
+                  <a
+                    href="https://mail.google.com/mail/?view=cm&fs=1&to=afnankk995@gmail.com&su=Mohammed%20Afnan&body=I%20want%20to%20talk%20about..."
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hover:text-orange-600 hover:ml-5 translate-all duration-700 text-lg cursor-pointer"
+                  >
                     <i class="fa-regular fa-envelope text-orange-600"></i>{" "}
                     <span className="dark:text-white text-black hover:text-orange-600 transition-all duration-600 ease-in-out">
                       {" "}
@@ -94,7 +99,10 @@ const Contact = () => {
                   </a>
                 </div>
                 <div className="inline-flex items-center group ">
-                  <a  href="https://www.linkedin.com/in/mohammed-afnan-kk" className="hover:text-orange-600 hover:ml-5 translate-all duration-700 text-lg cursor-pointer">
+                  <a
+                    href="https://www.linkedin.com/in/mohammed-afnan-kk"
+                    className="hover:text-orange-600 hover:ml-5 translate-all duration-700 text-lg cursor-pointer"
+                  >
                     <i class="fa-brands fa-linkedin-in text-orange-600"></i>{" "}
                     <span className="dark:text-white text-black hover:text-orange-600 transition-all duration-600 ease-in-out">
                       {" "}
@@ -104,7 +112,10 @@ const Contact = () => {
                 </div>
                 <div className="inline-flex items-center group gap-2 ">
                   {" "}
-                  <a href="https://github.com/mohammedafnankk" className="hover:text-orange-600 hover:ml-5 translate-all duration-700 text-lg cursor-pointer">
+                  <a
+                    href="https://github.com/mohammedafnankk"
+                    className="hover:text-orange-600 hover:ml-5 translate-all duration-700 text-lg cursor-pointer"
+                  >
                     <i class="fa-brands fa-github text-orange-600"></i>{" "}
                     <span className="dark:text-white text-black hover:text-orange-600 transition-all duration-600 ease-in-out">
                       github.com/mohammedafnankk

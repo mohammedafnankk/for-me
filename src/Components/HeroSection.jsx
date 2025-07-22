@@ -2,6 +2,7 @@ import React, { useEffect, useRef } from "react";
 import gsap from "gsap";
 import SplitText from "gsap/SplitText";
 import "../Hero.css";
+import { Link } from "react-scroll";
 
 gsap.registerPlugin(SplitText);
 
@@ -35,7 +36,7 @@ const HeroSection = () => {
           <h1 ref={textRef} className="text-4xl font-bold mb-6 sm:text-6xl">
             <span className="dark:text-white text-black">Hi, I'am</span>{" "}
             <span>
-              Muhammed <span>Afnan</span>
+              Mohammed <span>Afnan</span>
             </span>{" "}
           </h1>
           <h2 className="text-2xl sm:text-3xl font-semibold mb-4 text-[#9a9a9a] dark:text-[#71717a]">
@@ -48,9 +49,14 @@ const HeroSection = () => {
             <button className="cursor-pointer group transition-all duration-300 hover:scale-105 hover:shadow-lg hover:bg-orange-400 bg-orange-600 text-white inline-flex justify-center items-center px-8 text-lg py-2 rounded-md">
               View My Work <i class="fa-solid fa-arrow-right pl-2"></i>
             </button>
-            <button className="text-orange-600 dark:text-white dark:border-gray-300  cursor-pointer text-lg group transition-all duration-300 hover:scale-105 hover:shadow-lg border px-8 py-2 rounded-md border-orange-600">
+            <Link
+              to="contact"
+              smooth={true}
+              duration={500}
+              className="text-orange-600 dark:text-white dark:border-gray-300  cursor-pointer text-lg group transition-all duration-300 hover:scale-105 hover:shadow-lg border px-8 py-2 rounded-md border-orange-600"
+            >
               Contact Me
-            </button>
+            </Link>
           </div>
         </div>
       </div>
