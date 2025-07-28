@@ -4,6 +4,7 @@ import ScrollSmoother from "gsap/ScrollSmoother";
 import ScrollTrigger from "gsap/ScrollTrigger";
 import { Toaster } from "react-hot-toast";
 import { useSelector } from "react-redux";
+import { BrowserRouter as Route,Routes,Router } from "react-router-dom";
 
 import Aos from "aos";
 import HeroSection from "./Components/HeroSection";
@@ -18,6 +19,7 @@ import "aos/dist/aos.css";
 import Certificats from "./Components/Certificats";
 import Foooter from "./Components/Foooter";
 import useDarkMode from "./Components/useDarkmode";
+import ResponsiveNavbar from "./Components/ResponsiveNavbar";
 
 gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
 
@@ -70,6 +72,7 @@ function App() {
           },
         }}
       />
+      
       <Navbar />
       <main ref={wrapper}>
         <div ref={content}>
@@ -81,6 +84,7 @@ function App() {
           <Contact />
           <Certificats />
           <Foooter/>
+          <ResponsiveNavbar/>
         </div>
       </main>
     </div>

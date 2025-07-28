@@ -54,8 +54,8 @@ const Navbar = () => {
     console.log(isOpen);
     
   return (
-    <div>
-      <div className="px-4 fixed w-full border backdrop-blur-md z-50 dark:border-0 border-b-gray-300">
+    <div className="max-sm:hidden">
+      <div className="px-4 fixed w-full border backdrop-blur-md z-50 dark:border-0 border-b-gray-300 ">
         <div className={`flex justify-between  ${isOpen===false?"items-center":" "} py-5 `}>
           <div className={`${isOpen===false?"":"hidden"}`}>
             <h1 ref={textRef} className="font-bold text-xl text-orange-600">
@@ -76,7 +76,7 @@ const Navbar = () => {
           {/* <div className="flex"> */}
 
           
-          <div  className={`text-[#71717a] text-2xl   flex   ${isOpen===false?"max-md:hidden space-x-8":"max-md:block h-screen space-y-3 "} `}>
+          <div  className={` max-sm:hidden text-[#71717a] max-md:text-2xl flex ${isOpen===false?"max-md:hidden space-x-8":"max-md:block h-screen space-y-3 "}  `}>
             <Link
               className="hover:text-orange-600 cursor-pointer group relative flex flex-col"
               onClick={()=>setIsOpen(false)}
@@ -151,7 +151,7 @@ const Navbar = () => {
 
           </div>
 
-            <div onClick={()=>setIsOpen((prev)=>prev===false?true:false)} className="text-white hidden max-sm:block">
+            <div onClick={()=>setIsOpen((prev)=>prev===false?true:false)} className="text-white hidden max-md:block max-sm:hidden">
       
               {isOpen===false?<i class="fa-solid fa-bars-staggered text-2xl text-orange-600"></i>:<i class="fa-solid fa-xmark text-2xl text-orange-600"></i>}
             </div>

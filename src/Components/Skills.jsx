@@ -13,7 +13,7 @@ const Skills = () => {
             className="w-19 h-1 bg-gradient-to-r from-orange-600 to-orange-400 mx-auto delay-700"
           ></div>
         </div>
-        <div className="grid grid-cols-4 gap-6 max-sm:grid-cols-1">
+        <div className="grid grid-cols-4 gap-6 max-md:grid-cols-2 max-sm:grid-cols-1">
           <div
             data-aos="fade-up"
             data-aos-duration="800"

@@ -13,7 +13,7 @@ const Certificats = () => {
             className="w-20 h-1 bg-gradient-to-r from-orange-600 to-orange-400 mx-auto delay-700"
           ></div>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-3 max-md:grid-cols-2 max-sm:grid-cols-1 gap-6">
           <div data-aos="fade-up" data-aos-duration="1000" className="rounded-lg border border-gray-300 group bg-white  transition delay-150 duration-600 ease-in-out hover:translate-y-1 hover:scale-100 hover:shadow-xl shadow-lg">
             <div className="p-5 space-y-1.5 flex flex-col text-center">
               <div className="transition-transform duration-500 hover:rotate-360">
