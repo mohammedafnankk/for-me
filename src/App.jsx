@@ -80,7 +80,7 @@ function App() {
           <About />
           <Skills />
           <Projects />
-          <Blog />
+          {/* <Blog /> */}
           <Contact />
           <Certificats />
           <Foooter/>
