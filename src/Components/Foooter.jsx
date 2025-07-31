@@ -4,6 +4,12 @@ import { Link } from "react-scroll";
 const Foooter = () => {
   const year = new Date().getFullYear();
 
+   const phoneNumber = "+919995745595"; // Use country code, no + or spaces
+  const message = "Hello, I'm interested in your services!";
+  const encodedMessage = encodeURIComponent(message);
+
+   const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
+
   return (
     <div>
       <section className="pt-12 dark:bg-bc bg-white border border-t-[#9a9a9a]">
@@ -46,6 +52,10 @@ const Foooter = () => {
               >
                 <i class="fa-regular fa-envelope text-orange-600"></i>{" "}
               </a>
+            </div>
+            <div className="inline-flex items-center group gap-2">
+               <a href={whatsappUrl} target="_blank" rel="noopener noreferrer" className="hover:text-orange-600  translate-all duration-700 text-2xl hover:text-4xl cursor-pointer">  <i class="fa-brands fa-whatsapp text-orange-600"></i></a>
+             
             </div>
           </div>
 
