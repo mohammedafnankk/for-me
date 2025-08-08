@@ -32,6 +32,9 @@ const HeroSection = () => {
       className="dark:bg-bc bg-white h-screen flex flex-col justify-center items-center"
     >
       <div data-aos="fade-up" className="text-center py-20 ">
+        {/* <div className="relative w-32 h-32 sm:w-40 sm:h-40 mx-auto mb-8">
+          <img src="pro.jpg" alt="" className="w-full h-full rounded-full object-cover border-4 border-orange-600 shadow-lg" />
+        </div> */}
         <div className="">
           <h1 ref={textRef} className="text-4xl font-bold mb-6 sm:text-6xl">
             <span className="dark:text-white text-black">Hi, I'am</span>{" "}
