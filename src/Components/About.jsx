@@ -20,8 +20,8 @@ const About = () => {
           <div data-aos="fade-up" className=" ">
             <div className="flex flex-col lg:flex-row gap-8 items-center dark:bg-[#EEEEEE] bg-white transition delay-150 duration-600 ease-in-out hover:-translate-y-1 hover:scale-110 p-8 max-w-4xl mx-auto text-lg space-y-4 text-[#71717a] rounded-lg  shadow-2xs hover:shadow-xl border border-gray-300 max-sm:mx-4">
              <div className="relative w-42 h-52 mx-auto lg:mx-0 max-sm:w-full">
-            <img src="pro.jpg" alt="" className="w-full h-full rounded-2xl object-cover shadow-xl "/>
-            <div className="absolute inset-0 rounded-2xl bg-gradient-to-tr from-orange-600/20 to-transparent"></div>
+            <img src="profile.jpg" alt="" className="w-full h-full rounded-2xl object-cover shadow-xl "/>
+            <div className="absolute inset-0 rounded-2xl"></div>
           </div>
           <div className="flex-1">
 
